@@ -8,14 +8,21 @@ require 'calculator'
 # Testing Driven Development
 # Desenvolvimento guiado por teste
 
+#~> describe Calculator, "sobre a class Calculator" do
 describe Calculator do
   context '#sum' do
+    # Subject explicit
+    # Quando podemos sobrescrever
+    # subject(:calc) { described_class.new }
+    # subject(:subject) { described_class.new(1,2,3) } <~ com parâmetros
     it 'with positive numbers' do
       # Setup ~> Quando você coloca o SUT(system under test, o objeto sendo testado)
       # no estado necessário para o teste;
-      calc = described_class.new
+      # calc = described_class.new
+
       # Exercise ~> Quando você interage com o SUT;
-      result = calc.sum(2,5)
+      result = subject.sum(2,5) #subject implicito
+
       # Verify ~> Quando você verifica o comportamento esperado
       expect(result).to eq(7)
     end
@@ -30,7 +37,7 @@ describe Calculator do
     end
 
     it 'with negative numbers' do
-      calc = described_class.new
+      calc = Calculator.new
 
       result = calc.sum(-2,-5)
 
