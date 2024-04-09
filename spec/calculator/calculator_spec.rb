@@ -44,4 +44,18 @@ describe Calculator do
       expect(result).to eq(-7)
     end
   end
+
+  context '#div' do
+  # raise_exception
+  # raise_error(ErrorClass)
+  # raise_error("error message")
+  # raise_error(ErrorClass, "error message")
+  # /regex/
+    it 'divided by 0' do
+      expect { subject.div(4, 0) }.to raise_error(ZeroDivisionError)
+      expect { subject.div(4, 0) }.to raise_error("divided by 0")
+      expect { subject.div(4, 0) }.to raise_error(ZeroDivisionError, "divided by 0")
+      expect { subject.div(4, 0) }.to raise_error(/divided/)
+    end
+  end
 end
