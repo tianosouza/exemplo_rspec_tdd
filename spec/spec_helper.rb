@@ -18,6 +18,33 @@ RSpec.configure do |config|
 
   # Helper method
   config.include Helper
+
+#   # Testando before
+#   config.before(:suite) do
+#     puts 'Antes de toda a suite de testes'
+#   end
+#   config.before(:context) do
+#     puts 'Antes de todos os testes'
+#   end
+
+#   config.before(:all) do
+#       puts 'Antes de todos os testes'
+#   end
+
+
+#   # Testando After
+# config.after(:suite) do
+#   puts 'Depois de toda a suite de testes'
+# end
+
+# config.after(:context) do
+#   puts 'Depois de todos testes'
+# end
+
+# config.after(:all) do
+#   puts 'Depois de todos testes'
+# end
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
