@@ -18,10 +18,11 @@ GEM
 
 PLATFORMS
   ruby
+  universal-java-1.8
   x86_64-linux
 
 DEPENDENCIES
   rspec
 
 BUNDLED WITH
-   2.5.7
+   2.3.27
