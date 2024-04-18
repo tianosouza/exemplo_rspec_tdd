@@ -16,6 +16,11 @@ require_relative '../helpers/helper'
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
 
+  # Aggregate failures
+  # config.defined_derived_metadata do |meta|
+  #   meta[:aggrete_failures] = true
+  # end
+
   # Helper method
   config.include Helper
 
